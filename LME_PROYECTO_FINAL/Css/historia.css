@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Usa la fuente Montserrat */
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5; /* Color de fondo claro */
+    color: black;
+    line-height: 1.6; /* Altura de línea */
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 80px; /* Espacio para la barra  */
+}
+
+/* Estilos de la barra de navegación */
+.barra {
+    position: fixed; /* Se mantiene fija arriba */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #004D40; /* Verde oscuro */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 70px;
+    z-index: 1000; /* Se mantiene encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra inferior */
+}
+
+/* Lista de enlaces de navegación */
+.nav-links {
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre enlaces */
+    width: 100%;
+}
+
+/* Elementos individuales de la lista */
+.nav-links li {
+    position: relative; /* Necesario para dropdown */
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Cambio de color al pasar el mouse */
+.nav-links a:hover {
+    color: #007BFF; /* Azul claro */
+}
+
+/* Muestra el dropdown al pasar el mouse */
+.nav-links li:hover > .dropdown {
+    display: block;
+}
+
+/* Estilo del dropdown (menú desplegable) */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(7, 121, 102);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Elementos del dropdown */
+.dropdown li {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Enlaces del dropdown */
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 1s ease, transform 1s ease;
+}
+
+/* Efecto hover en el dropdown */
+.dropdown li a:hover {
+    background-color: #e2e600;
+    color: #000;
+    transform: scale(1.3);
+}
+
+/* Submenús dentro del dropdown */
+.dropdown li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: rgb(4, 90, 77);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Muestra submenús al pasar el mouse */
+.dropdown li:hover > ul {
+    display: block;
+}
+
+/* Estilo de los submenús */
+.dropdown li ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Enlaces de submenú */
+.dropdown li ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover en enlaces del submenú */
+.dropdown li ul li a:hover {
+    background-color: #05d833;
+}
+
+/* Oculta el toggle de menú por defecto */
+.menu-toggle {
+    display: none;
+}
+
+/* Icono del menú (hamburguesa) */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Se muestra solo en responsive */
+}
+
+/* Estilos para pantallas menores a 768px (tablets/móviles) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Cuando el checkbox está activado, muestra el menú */
+    #menu-toggle:checked ~ .nav-links {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+    }
+
+    .nav-links li:hover > .dropdown {
+        display: block;
+    }
+}
+
+/* Sección de historia */
+.historia {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.historia h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.historia p {
+    text-align: justify;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Galería de imágenes */
+.historia-imagenes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.historia-imagenes img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(255, 145, 0, 0.753);
+    transition: all 0.5s ease;
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+.historia-imagenes img:hover {
+    border: 5px solid #000;
+    transform: scale(1.10);
+    box-shadow: 0 8px 10px rgba(255, 145, 0, 0.753);
+}
+
+/* Botón de llamada a la acción */
+.historia-contenido .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto del botón al pasar el mouse */
+.historia-contenido .cta-button:hover {
+    background-color: #92df04;
+    box-shadow: 0 7px 10px rgba(0, 255, 157, 0.76);
+    transform: scale(1.05);
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #004D40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Estilo del logo animado */
+.logo-container img {
+    width: 100px;
+    height: 90px;
+    margin-top: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px rgb(255, 255, 0), 0px -10px 20px rgb(255, 0, 0);
+    animation: logo 2s infinite;
+    transition: transform 0.3s;
+}
+
+/* Animación del logo */
+@keyframes logo {
+    0%   { transform: scale(0.9); }
+    25%  { transform: scale(1); }
+    50%  { transform: scale(0.8); }
+    75%  { transform: scale(1); }
+    100% { transform: scale(0.9); }
+}
+
+/* Responsive para diferentes dispositivos */
+/* Tablets horizontales */
+@media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .dropdown {
+    width: 180px;
+  }
+}
+
+/* Tablets verticales */
+@media (max-width: 768px) {
+  .barra {
+    padding: 15px 20px;
+  }
+
+  .historia {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .historia-imagenes {
+    margin-top: 30px;
+  }
+
+  .historia-img {
+    max-width: 80%;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #004D40;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .dropdown li ul {
+    position: static;
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Teléfonos grandes */
+@media (max-width: 600px) {
+  .barra {
+    height: 60px;
+    padding: 10px 15px;
+  }
+
+  .logo-container img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .historia h2 {
+    font-size: 2rem;
+  }
+
+  .historia p {
+    font-size: 1rem;
+  }
+
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .hero-content a.informacion,
+  .seccion-extra .informacion-boton {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+    .historia-imagenes {
+    max-width: 50%;
+    display: inline;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- MENÚ HAMBURGUESA --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Menú móvil */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #004D40;
+    padding: 20px 0;
+    flex-direction: column;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.mobile-nav a:hover {
+    background-color: #00796B;
+    padding-left: 25px;
+}
+
+/* Submenús móviles */
+.mobile-submenu {
+    display: none;
+    padding-left: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobile-submenu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Animación del icono hamburguesa */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .barra {
+        justify-content: center;
+        padding-left: 60px;
+    }
+    
+    .mobile-nav {
+        display: flex;
+    }
+}

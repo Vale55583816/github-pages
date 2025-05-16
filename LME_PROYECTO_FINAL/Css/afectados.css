@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* Trae la fuente Montserrat */
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Usa la fuente Montserrat */
+    margin: 0; /* Quita el margen que tiene el navegador por defecto */
+    padding: 0; /* Quita el espacio interior por defecto */
+    background: #f5f5f5; /*fondo gris  claro */
+    color: black; /* El texto será negro */
+    line-height: 1.6; /* Espacio entre líneas  */
+    width: 100%; /* El cuerpo ocupa todo el ancho */
+    overflow-x: hidden; /* Evita que salga barra horizontal  */
+    padding-top: 80px; /* Deja espacio arriba porque la barra fija ocupa espacio */
+}
+
+.barra {
+    position: fixed; /* La barra se queda fija en la pantalla*/
+    top: 0; /* NO margen */
+    left: 0; /* NO margen*/
+    right: 0; /* NO margen */
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #004D40; /* Color de fondo verde oscuro */
+    padding: 15px 50px; /* Espacio dentro de la barra arriba/abajo y a los lados */
+    display: flex; /* Organiza en fila */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra  verticalmente */
+    color: white; /* El texto dentro es blanco */
+    height: 70px; /* Altura fija de la barra */
+    z-index: 1000; /* La pone por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave abajo para darle profundidad */
+}
+
+body {
+    margin: 0; /* No margen */
+    padding-top: 70px; /* Espacio arriba*/
+}
+
+.nav-links {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin margen */
+    display: flex; /* Enlaces en fila */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    gap: 30px; /* Espacio entre cada link */
+    width: 100%; /* Todo el ancho */
+}
+
+.nav-links li {
+    position: relative; /* Submenús con posición absoluta relativos*/
+}
+
+.nav-links a {
+    color: white; /* Texto blanco en los enlaces */
+    text-decoration: none; /* Quita subrayado */
+    font-size: 1.2rem;  /*tamaño de letra*/
+    transition: color 0.3s ease; /* Efecto suave al cambiar color */
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Cambia a azul cuando pasas el mouse */
+}
+
+.nav-links li:hover > .dropdown {
+    display: block; /* Muestra el submenú cuando pasas el mouse sobre el */
+}
+
+.dropdown {
+    display: none; /* El submenú está oculto por defecto */
+    position: absolute; /* Posición absoluta  */
+    top: 100%; /* Justo debajo  */
+    left: 0; /* Alineado a la izquierda */
+    background-color: rgb(7, 121, 102); /* Color verde azulado */
+    list-style: none; /* Quita los puntos */
+    padding: 0; /* Sin espacio interno */
+    margin: 0; /* Sin espacio externo */
+    width: 200px; /* Ancho fijo del submenú */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.dropdown li {
+    padding: 10px; /* Espacio dentro de cada opción */
+    text-align: center; /* Texto centrado */
+}
+
+.dropdown li a {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Ocupa todo el ancho del menú */
+    transition: background-color 1s ease, transform 1s ease; /* Animación */
+}
+
+.dropdown li a:hover {
+    background-color: #e2e600; /* Fondo amarillo cuando pasas el mouse */
+    color: #000; /* Texto negro cuando está en hover */
+    transform: scale(1.3); /* Agranda un poco */
+}
+
+.dropdown li ul {
+    display: none; /* Submenú anidado oculto */
+    position: absolute; /* Posición absoluta para que aparezca al lado */
+    top: 0; /* Alineado arriba */
+    left: 100%; /* Aparece justo a la derecha */
+    background-color: rgb(4, 90, 77); /* Verde oscuro para este submenú */
+    list-style: none; /* Sin puntos */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin margen */
+    width: 200px; /* Ancho fijo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.dropdown li:hover > ul {
+    display: block; /* Muestra el submenú anidado cuando pasas mouse*/
+}
+
+.dropdown li ul li {
+    padding: 10px; /* Espacio dentro de las opciones del submenú anidado */
+    text-align: center; /* Texto centrado */
+}
+
+.dropdown li ul li a {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Ocupa todo el ancho */
+}
+
+.dropdown li ul li a:hover {
+    background-color: #05d833; /* Fondo verde */
+}
+
+.menu-toggle {
+    display: none; /* Oculto  menú responsive*/
+}
+
+.menu-icon {
+    font-size: 2rem; /* Tamaño grande para el ícono */
+    cursor: pointer; /* Cambia cursor a mano*/
+    display: none; /* Oculto por defecto */
+}
+
+.historia {
+    padding: 20px; /* Espacio alrededor del contenido */
+    margin-top: 40px; /* Espacio arriba para separar de la barra */
+}
+
+.historia h2 {
+    text-align: center; /* Centra el título */
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    margin-bottom: 20px; /* Espacio abajo */
+}
+
+.historia h3 {
+    text-align: center; /* Centra subtítulo */
+    font-size: 2rem; /* Tamaño mediano para subtítulo */
+    margin-bottom: 20px; /* Espacio abajo */
+    font-weight: bold; /* Letra más gruesa */
+}
+
+.historia p {
+    text-align: justify; /* Texto justificado */
+    font-size: 1.2rem; /* Tamaño de letra legible */
+    margin-bottom: 20px; /* Espacio abajo */
+    line-height: 1.6; /* Espacio entre líneas */
+}
+
+.historia-imagenes {
+    display: flex; /* Las imágenes en fila */
+    gap: 20px; /* Espacio entre imágenes */
+    justify-content: center; /* Centra las imágenes */
+}
+
+.historia-imagenes img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    max-width: 500px; /* Máximo ancho 500px */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.historia-contenido {
+    margin-top: 20px; /* Espacio arriba */
+    text-align: center; /* Centra el texto */
+}
+
+footer {
+    background-color: #004D40; /* Fondo verde oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Texto centrado */
+    padding: 20px 0; /* Espacio arriba y abajo */
+}
+
+footer p {
+    margin: 0; /* Sin margen */
+    font-size: 1rem; /* Tamaño normal */
+}
+
+.logo-container img {
+    width: 100px; /* Ancho fijo de la imagen */
+    height: 90px; /* Alto fijo de la imagen */
+    margin-top: 5px; /* Espacio arriba */
+    border-radius: 50%; /* Hace la imagen redonda */
+    box-shadow: 0px 10px 20px rgb(255, 255, 0), 0px -10px 20px rgb(255, 0, 0);
+    /* Efecto */
+    animation: logo 2s infinite; /* La imagen hace una animación repetida */
+    transition: transform 0.3s; /* Efecto suave para transformaciones */
+}
+
+@keyframes logo {
+    0%   { transform: scale(0.9); } /* Empieza más pequeña */
+    25%  { transform: scale(1); } /* Crece a tamaño normal */
+    50%  { transform: scale(0.8); } /* Se hace un poco más pequeña */
+    75%  { transform: scale(1); } /* Vuelve a tamaño normal */
+    100% { transform: scale(0.9); } /* Regresa al tamaño más pequeño */
+}
+
+table {
+    border-collapse: collapse; /* Quita espacio entre bordes */
+    border: 2px solid #000; /* Borde negro y grueso */
+    text-align: center; /* Texto centrado en celdas */
+    margin-left: 20em; /* Separa la tabla del borde izquierdo */
+    margin-bottom: 20px; /* Espacio abajo */
+    margin-top: 20px; /* Espacio arriba */
+}
+
+th, td {
+    border: 2px solid #000; /* Borde negro y grueso en celdas */
+    padding: 10px; /* Espacio dentro de las celdas */
+    text-align: center; /* Texto centrado en celdas */
+}

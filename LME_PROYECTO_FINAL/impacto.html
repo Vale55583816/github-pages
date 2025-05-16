@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/impacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="barra">
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <div class="logo-container">
+            <img src="img/logo2.png" alt="LOGO">
+        </div>
+        
+        <!-- Menú principal (visible en desktop) -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="inicio.html" class="active">Inicio</a></li>
+            <li class="dropdown-parent">
+                <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="nested-dropdown-parent">
+                        <a href="afectados.html">Afectados <i class="fas fa-chevron-right"></i></a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="trabajador_a.html">Trabajador A</a></li>
+                            <li><a href="trabajador_b.html">Trabajador B</a></li>
+                            <li><a href="trabajador_c.html">Trabajador C</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="impacto.html">Impacto</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Creadores.html">Creadores</a></li>
+        </ul>
+        
+        <!-- Menú móvil (oculto en desktop) -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="inicio.html">Inicio</a>
+            <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+            <div class="mobile-submenu">
+                <a href="afectados.html">Afectados <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-submenu">
+                    <a href="trabajador_a.html">Trabajador A</a>
+                    <a href="trabajador_b.html">Trabajador B</a>
+                    <a href="trabajador_c.html">Trabajador C</a>
+                </div>
+            </div>
+            <a href="impacto.html">Impacto</a>
+            <a href="Galeria.html">Galería</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="Creadores.html">Creadores</a>
+        </div>
+    </nav>
+    <section class="impacto">
+        <h2>El impacto fueron lecciones</h2>
+        <ol>
+            <li><strong>Las empresas priorizan la producción sobre la seguridad:</strong>
+                La seguridad radiológica no debe verse como un gasto innecesario, ya que su descuido puede provocar accidentes graves.
+            </li>
+            <li><strong>No confiar ciegamente en los proveedores:</strong>
+                Es esencial revisar los equipos y detectar posibles riesgos en lugar de asumir que todo está bien diseñado.
+            </li>
+            <li><strong>Programa de seguridad radiológica obligatorio:</strong>
+                Cualquier lugar que maneje radiación debe tener normas y medidas de protección para prevenir accidentes.
+            </li>
+            <li><strong>Seguir las recomendaciones del proveedor:</strong>
+                Ignorar las advertencias de seguridad o retrasar las acciones recomendadas puede poner en riesgo a las personas.
+            </li>
+            <li><strong>Los investigadores de accidentes deben enfocarse en los hechos:</strong>
+                En lugar de buscar culpables, se deben analizar las causas del accidente para evitar que vuelva a ocurrir.
+            </li>
+        </ol>
+        
+
+        <h3>Historia del accidente</h3>
+        <video src="video/video_Chernobyl.mp4" controls loop >
+            Tu navegador no soporta este formato de video.
+           </video>
+
+        <div class="impacto-contenido">
+            <p>Las consecuencias de este evento siguen siendo un tema importante de debate, y su impacto se siente incluso hoy...</p>
+            <a href="historia.html" class="cta-button">Conoce más sobre la historia</a>
+        </div>
+    </section>
+
+   
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+        <p>IG: chernobyl_sv1989</p>
+    </footer>
+    <script src="JavaScript/impacto.js"></script>
+    <script src="JavaScript/Menu.js"></script>
+</body>
+</html>

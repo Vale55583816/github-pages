@@ -1,0 +1,415 @@
+/* Importa la fuente Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* --- MENÚ HAMBURGUESA --- */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 1001; /* Por encima de otros elementos */
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+/* --- ESTILOS GENERALES DEL BODY --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: black;
+    line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    padding-top: 80px; /* Espacio para la barra fija */
+}
+
+/* --- BARRA DE NAVEGACIÓN FIJA --- */
+.barra {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    background-color: #004D40;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 70px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste duplicado del body (puede eliminarse uno) */
+body {
+    margin: 0;
+    padding-top: 70px;
+}
+
+/* --- ENLACES DE NAVEGACIÓN --- */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+/* Muestra dropdown al pasar el mouse */
+.nav-links li:hover > .dropdown {
+    display: block;
+}
+
+/* --- SUBMENÚ DESPLEGABLE --- */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(7, 121, 102);
+    list-style: none;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 1s ease, transform 1s ease;
+}
+
+.dropdown li a:hover {
+    background-color: #e2e600;
+    color: #000;
+    transform: scale(1.3);
+}
+
+/* Ícono del menú hamburguesa en responsive */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* --- SUBMENÚ ANIDADO --- */
+.dropdown li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    background-color: rgb(4, 90, 77);
+    list-style: none;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown li:hover > ul {
+    display: block;
+}
+
+.dropdown li ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown li ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown li ul li a:hover {
+    background-color: #05d833;
+}
+
+/* --- DISEÑO RESPONSIVO (pantallas pequeñas) --- */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+    }
+
+    .nav-links li:hover > .dropdown {
+        display: block;
+    }
+}
+
+/* --- SECCIÓN IMPACTO --- */
+.impacto {
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.impacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.impacto li {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* --- BOTÓN DE LLAMADO A LA ACCIÓN --- */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffee00;
+    color: #000;
+    box-shadow: 0 7px 10px rgba(255, 0, 0, 0.76);
+    font-weight: bold;
+    border-radius: 15px;
+    transform: scale(1.2);
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    background-color: #004D40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* --- LOGO ANIMADO --- */
+.logo-container img {
+    width: 100px;
+    height: 90px;
+    margin-top: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px yellow, 0px -10px 20px red;
+    animation: logo 2s infinite;
+    transition: transform 0.3s;
+}
+
+@keyframes logo {
+    0%   { transform: scale(0.9); }
+    25%  { transform: scale(1); }
+    50%  { transform: scale(0.8); }
+    75%  { transform: scale(1); }
+    100% { transform: scale(0.9); }
+}
+
+/* --- VIDEO CON SOMBRA Y EFECTO HOVER --- */
+video {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 30px auto;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+video:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.8), 0 0 40px rgba(0, 255, 157, 0.6), 0 0 60px rgba(0, 255, 157, 0.4);
+    border: 3px solid rgba(0, 255, 157, 1);
+    transform: scale(1.02);
+}
+
+/* --- MEDIA QUERIES ADICIONALES --- */
+
+/* Tablets y laptops pequeñas */
+@media (max-width: 1024px) {
+    .hero { height: auto; padding: 40px 20px; }
+    .hero-content { padding: 15px; }
+    .nav-links { gap: 20px; }
+    .dropdown { width: 180px; }
+}
+
+/* Tablets verticales */
+@media (max-width: 768px) {
+    .barra { padding: 15px 20px; }
+    .hero { flex-direction: column; text-align: center; margin-top: 70px; }
+    .hero-image { margin-top: 30px; }
+    .hero-img { max-width: 80%; }
+    .informacion-content, .seccion-extra-content { flex-direction: column; }
+    .informacion-img { margin-bottom: 20px; }
+    .nav-links { display: none; position: absolute; top: 80px; flex-direction: column; padding: 20px 0; }
+    .nav-links.active { display: flex; }
+    .dropdown { position: static; width: 100%; box-shadow: none; }
+    .dropdown li ul { position: static; width: 100%; margin-left: 20px; }
+    .menu-icon { display: block; }
+}
+
+/* Móviles grandes */
+@media (max-width: 600px) {
+    .barra { height: 60px; padding: 10px 15px; }
+    .logo-container img { width: 50px; height: 50px; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .informacion h2, .seccion-extra h2 { font-size: 1.8rem; }
+    audio { width: 90%; }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .hero-content a.informacion,
+    .seccion-extra .informacion-boton {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+/* Estilos del menú hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Menú móvil */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #004D40;
+    padding: 20px 0;
+    flex-direction: column;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav a:hover {
+    background-color: #00796B;
+}
+
+/* Submenús móviles */
+.mobile-submenu {
+    display: none;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobile-submenu.active {
+    display: block;
+}
+
+/* Animación del icono */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .barra {
+        justify-content: center;
+        padding-left: 60px;
+    }
+}

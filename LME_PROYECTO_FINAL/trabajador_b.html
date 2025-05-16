@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador B</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Css/trabajadores.css"> 
+</head>
+<body>
+<nav class="barra">
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <div class="logo-container">
+            <img src="img/logo2.png" alt="LOGO">
+        </div>
+        
+        <!-- Menú principal (visible en desktop) -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="inicio.html" class="active">Inicio</a></li>
+            <li class="dropdown-parent">
+                <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="nested-dropdown-parent">
+                        <a href="afectados.html">Afectados <i class="fas fa-chevron-right"></i></a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="trabajador_a.html">Trabajador A</a></li>
+                            <li><a href="trabajador_b.html">Trabajador B</a></li>
+                            <li><a href="trabajador_c.html">Trabajador C</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="impacto.html">Impacto</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Creadores.html">Creadores</a></li>
+        </ul>
+        
+        <!-- Menú móvil (oculto en desktop) -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="inicio.html">Inicio</a>
+            <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+            <div class="mobile-submenu">
+                <a href="afectados.html">Afectados <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-submenu">
+                    <a href="trabajador_a.html">Trabajador A</a>
+                    <a href="trabajador_b.html">Trabajador B</a>
+                    <a href="trabajador_c.html">Trabajador C</a>
+                </div>
+            </div>
+            <a href="impacto.html">Impacto</a>
+            <a href="Galeria.html">Galería</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="Creadores.html">Creadores</a>
+        </div>
+    </nav>
+    <!-- Sección principal de la Historia -->
+    <section class="historia">
+        <h2>Trabajador B</h2>
+        
+        <ul class="info_paciente">
+            <li><strong>Día 173 (jueves 27 de julio):</strong> El Paciente B regresó a San Salvador y permaneció en su 
+                domicilio hasta que se preparó una habitación especial para él en el Hospital Médico Quirúrgico.</li>
+
+            <li><strong>Estado general:</strong> Su condición general continuó mejorando, pero la situación de su otra 
+                pierna (derecha) empeoró, con mala circulación, infección y dolor extremo.</li>
+
+            <li><strong>Tratamiento:</strong> Se le prescribió un tratamiento con antibióticos de amplio espectro antes 
+                de la amputación de su pierna derecha.</li>
+
+            <li><strong>Día 202 (viernes 25 de agosto):</strong> Se realizó la amputación de la pierna derecha del 
+                Paciente B.</li>
+
+            <li><strong>Recuperación:</strong> Después de la amputación, el Paciente B se recuperó y se encontraba en 
+                buenas condiciones físicas y mentales.</li>
+
+            <li><strong>Riesgo:</strong> Sin embargo, su riesgo de desarrollar cataratas es alto.</li>
+        </ul>
+        
+
+        <div class="historia-imagenes">
+            <img src="img/b.png" alt="Accidente radioactivo 1989">
+            <img src="img/b1.png" alt="Accidente radioactivo 1989">
+        </div>
+
+        <div class="descripcion">
+            <div class="item">
+                <img src="img/lesiones_herpéticas.png" alt="" class="imagen">
+                <p>Lesiones herpéticas</p>
+            </div>
+            <div class="item">
+                <img src="img/descamacion_seca.png" alt="" class="imagen">
+                <p>Descamación seca</p>
+            </div>
+            <div class="item">
+                <img src="img/descamacion_humeda.png" alt="" class="imagen">
+                <p>Descamación húmeda</p>
+            </div>
+            <div class="item">
+                <img src="img/alopecia.png" alt="" class="imagen">
+                <p>Alopecia por radiación</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+        <p>IG: chernobyl_sv1989</p>
+    </footer>
+    <script src="JavaScript/Menu.js"></script>
+</body>
+</html>

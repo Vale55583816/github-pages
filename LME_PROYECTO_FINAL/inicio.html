@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chernobyl en El Salvador 1989</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Css/Inicio.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="img/logo2.png" alt="LOGO">
+        </div>
+        
+        <!-- Menú principal (visible en desktop) -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="inicio.html" class="active">Inicio</a></li>
+            <li class="dropdown-parent">
+                <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="nested-dropdown-parent">
+                        <a href="afectados.html">Afectados <i class="fas fa-chevron-right"></i></a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="trabajador_a.html">Trabajador A</a></li>
+                            <li><a href="trabajador_b.html">Trabajador B</a></li>
+                            <li><a href="trabajador_c.html">Trabajador C</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="impacto.html">Impacto</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="creadores.html">Creadores</a></li>
+        </ul>
+
+        <!-- Menú móvil (oculto en desktop) -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="inicio.html">Inicio</a>
+            <a href="Historia.html">Historia</a>
+            <a href="afectados.html">Afectados <i class="fas fa-chevron-down"></i></a>
+            <div class="mobile-submenu">
+                <a href="trabajador_a.html">Trabajador A</a>
+                <a href="trabajador_b.html">Trabajador B</a>
+                <a href="trabajador_c.html">Trabajador C</a>
+            </div>
+            <a href="impacto.html">Impacto</a>
+            <a href="Galeria.html">Galería</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="creadores.html">Creadores</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Chernobyl en El Salvador</h1>
+            <p>El incidente radiológico de El Salvador sucedió el <strong>5 de febrero de 1989</strong> en el distrito de 
+                Soyapango municipio de San Salvador Este.
+            </p>
+            <p>El incidente involucró una fuente de cobalto 60 usada para esterilizar productos médicos.</p>
+            <p>Tres trabajadores sufrieron exposiciones altas de dosis de radiación al tratar de desatascar
+                una fuente de radiación que se había atascado.
+            </p>
+            <a href="Historia.html" class="informacion">Más información</a>
+        </div>
+        <div class="hero-image">
+            <img src="img/images (1).png" alt="Imagen de Chernobyl El Salvador" class="hero-img">
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="informacion">
+            <h2>¿Qué ocurrió en 1989?</h2>
+            <div class="informacion-content">
+                <img src="img/1.png" alt="Accidente Chernobyl El Salvador" class="informacion-img">
+                <p>Un grave accidenete radiológico en una planta industrial de Soyapango, El Salvador donde se involucró un
+                    irradiador de cobalto-60 utilizado para poder esterilizar equipos médicos como suturas, guntes y jeringas.
+                </p>
+            </div>
+            <audio src="audio/audio_Chernobyl.mp3" controls autoplay loop>
+                Tu navegador no soporta este formato de audio.
+            </audio>
+        </section>
+        
+        <section class="seccion-extra">
+            <h2>Qué es la radiación?</h2>
+            <div class="seccion-extra-content">
+                <p>La radiación es la energía que se propaga en forma de ondas o partículas. Existen distintos tipos, pero
+                    la radiación ionizante, como la liberada en el accidente de Chernobyl, puede dañar las células y el ADN.
+                </p>
+                <a href="Historia.html" class="informacion-boton">¡Conoce sobre la radiación!</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+        <p>IG: chernobyl_sv1989</p>
+    </footer>
+
+    <script src="JavaScript/Menu.js"></script>
+</body>
+</html>

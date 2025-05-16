@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Css/contacto.css">
+</head>
+<body>
+    <nav class="barra">
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <div class="logo-container">
+            <img src="img/logo2.png" alt="LOGO">
+        </div>
+        
+        <!-- Menú principal (visible en desktop) -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="inicio.html" class="active">Inicio</a></li>
+            <li class="dropdown-parent">
+                <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="nested-dropdown-parent">
+                        <a href="afectados.html">Afectados <i class="fas fa-chevron-right"></i></a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="trabajador_a.html">Trabajador A</a></li>
+                            <li><a href="trabajador_b.html">Trabajador B</a></li>
+                            <li><a href="trabajador_c.html">Trabajador C</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="impacto.html">Impacto</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Creadores.html">Creadores</a></li>
+        </ul>
+        
+        <!-- Menú móvil (oculto en desktop) -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="inicio.html">Inicio</a>
+            <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+            <div class="mobile-submenu">
+                <a href="afectados.html">Afectados <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-submenu">
+                    <a href="trabajador_a.html">Trabajador A</a>
+                    <a href="trabajador_b.html">Trabajador B</a>
+                    <a href="trabajador_c.html">Trabajador C</a>
+                </div>
+            </div>
+            <a href="impacto.html">Impacto</a>
+            <a href="Galeria.html">Galería</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="Creadores.html">Creadores</a>
+        </div>
+    </nav>
+ 
+    <section class="contacto">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna pregunta o comentario, por favor completa el siguiente formulario:</p>
+
+        
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico: </label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono (opcional): </label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje: </label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+
+
+        <div class="info-contacto">
+            <h3>Información de Contacto</h3>
+            <p><strong>Dirección:</strong> Calle San Antonio, Ciudad San Salvador, País El Salvador.</p>
+            <p><strong>Teléfono:</strong> +503 456 7890</p>
+            <p><strong>Correo electrónico:</strong> contacto@chernobylsv1989.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+        <p>IG: chernobyl_sv1989</p>
+    </footer>
+    <script src="JavaScript/Menu.js"></script>
+</body>
+</html>

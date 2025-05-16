@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Css/trabajadores.css">
+</head>
+<body>
+    <nav class="barra">
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <div class="logo-container">
+            <img src="img/logo2.png" alt="LOGO">
+        </div>
+        
+        <!-- Menú principal (visible en desktop) -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="inicio.html" class="active">Inicio</a></li>
+            <li class="dropdown-parent">
+                <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="nested-dropdown-parent">
+                        <a href="afectados.html">Afectados <i class="fas fa-chevron-right"></i></a>
+                        <ul class="nested-dropdown-menu">
+                            <li><a href="trabajador_a.html">Trabajador A</a></li>
+                            <li><a href="trabajador_b.html">Trabajador B</a></li>
+                            <li><a href="trabajador_c.html">Trabajador C</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="impacto.html">Impacto</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Creadores.html">Creadores</a></li>
+        </ul>
+        
+        <!-- Menú móvil (oculto en desktop) -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="inicio.html">Inicio</a>
+            <a href="Historia.html">Historia <i class="fas fa-chevron-down"></i></a>
+            <div class="mobile-submenu">
+                <a href="afectados.html">Afectados <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-submenu">
+                    <a href="trabajador_a.html">Trabajador A</a>
+                    <a href="trabajador_b.html">Trabajador B</a>
+                    <a href="trabajador_c.html">Trabajador C</a>
+                </div>
+            </div>
+            <a href="impacto.html">Impacto</a>
+            <a href="Galeria.html">Galería</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="Creadores.html">Creadores</a>
+        </div>
+    </nav>
+
+    <!-- Sección principal de la Historia -->
+    <section class="historia">
+        <h2>Trabajador A</h2>
+
+        <ul class="info_paciente">
+            <li><strong>Día 173 (jueves 27 de julio):</strong> El Paciente A regresó a San Salvador y permaneció en su
+                domicilio.</li>
+
+            <li><strong>Día 177 (lunes 31 de julio):</strong> Fue trasladado a una habitación especial en el Hospital
+                Médico Quirúrgico. El tratamiento de seguimiento no pudo completarse debido a la falta de disponibilidad 
+                de los 83 medicamentos prescritos.</li>
+
+            <li><strong>Día 187 (jueves 10 de agosto):</strong> El estado del Paciente A comenzó a deteriorarse pocos 
+                días después de su reingreso hospitalario.</li>
+
+            <li><strong>Día 191 (lunes 14 de agosto):</strong> Su estado se volvió crítico, con fiebre alta, respiración 
+                acelerada, neumonía, infección en la pierna izquierda, mala circulación e hipotensión. Fue trasladado a 
+                la unidad de cuidados intensivos.</li>
+
+            <li><strong>Día 192 (martes 15 de agosto):</strong> Sufrió un neumotórax debido a la perforación de la 
+                membrana pulmonar por un catéter. Su hemoglobina descendió a 50 g/L y la concentración de trombocitos 
+                bajó a 20,000 µL. El tratamiento prescrito incluía transfusión de sangre, antibióticos e infusión de 
+                albúmina.</li>
+
+            <li><strong>Día 197 (domingo 20 de agosto):</strong> El paciente A falleció a las 7:00 a.m., 197 días después 
+                del accidente.</li>
+        </ul>
+        
+        <div class="historia-imagenes">
+            <img src="img/a.png" alt="Accidente radioactivo 1989">
+            <img src="img/a1.png" alt="Accidente radioactivo 1989">
+        </div>
+
+        <div class="descripcion">
+            <div class="item">
+                <img src="img/descamacion_seca.png" alt="" class="imagen">
+                <p>Descamación seca</p>
+            </div>
+            <div class="item">
+                <img src="img/descamacion_humeda.png" alt="" class="imagen">
+                <p>Descamación húmeda</p>
+            </div>
+            <div class="item">
+                <img src="img/alopecia.png" alt="" class="imagen">
+                <p>Alopecia por radiación</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+        <p>IG: chernobyl_sv1989</p>
+    </footer>
+
+    <script src="JavaScript/menu.js"></script>
+</body>
+</html>
